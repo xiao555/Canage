@@ -6,18 +6,28 @@
 	<meta content="all" name="robots" />
 	<meta name="author" content="Xiao555" />
 	<meta name="description" content="一个轻量化快速的图像处理应用" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all"/>
+	<link rel="stylesheet" rev="stylesheet" href="css/style.css" type="text/css" media="all"/>
 	<title>Canage</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 </head>
 <body>
 	<div class="header">
-		
+		<div class="innerheader">
+			<img class="logo" src="images/logo1.png" />
+			<p>让图像处理更快捷</p>
+		</div>
 	</div>
-	<div class="wrapper">
-		<div class="left"></div>
-		<div class="right"></div>
+	<div class="wrapper" style="background: black;">
+		<div id="picWrapper" class="picWrapper">
+        <img src="images/example原图.png" class="pic" id="pic" alt="" draggable="false"/>
+
+        <div id="infoMsg">
+          处理中
+        </div>
+    </div>
 	</div>
 	<div class="effects">
 		

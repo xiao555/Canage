@@ -1,7 +1,7 @@
 /*Designed by Xiao555  2015.9.26*/
 @charset "utf-8";
 
-* {
+/** {
 	display:inline-block;
     margin:0;
     padding:0;
@@ -9,19 +9,98 @@
     font-size:100%;
     vertical-align:baseline;
     outline:none;
-}
+}*/
 
 html, body{
     font-family:"Corbel",'Hiragino Sans GB','Microsoft YaHei','΢���ź�',sans-serif;
     width:100%;
     height:100%;
 }
-header{
+.header{
 	display: block;
 	width:100%;
-    height:40px;
+    height:50px;
     bacground:#fbfbfb;
     border-bottom:1px solid #ddd;
-    position:fixed;
+    position: absolute;
     z-index:999;
+    margin: 0;
+}
+
+.innerheader{
+	display: block;
+	width: 100%;
+	height: 49px;
+	background: #222222;
+	z-index: 1999;
+	position: absolute;
+	border-bottom:1px solid #000000 ;
+	float: left;
+}
+
+.logo{
+	float: left;
+	margin-left: 34%;
+	height: 49px;
+}
+
+.innerheader p{
+	size: auto;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	margin-top: 15px;
+	margin-left: 50%;
+	letter-spacing: 4px;
+}
+
+.wrapper{
+	position: relative;
+	display: block;
+	border-top:1px solid #282B2F;
+	height: auto;
+    top:50px;
+    height: 443px;
+}
+
+
+#infoMsg{
+    position:absolute;
+    top:170px;
+    left:450px;
+    z-index:9;
+    width:100px;
+    height:100px;
+    text-align:center;
+    line-height:100px;
+    background:#333;
+    border-radius:4px;
+    opacity:0.7;
+    display:none;
+    color:#ccc;
+}
+
+
+.picWrapper{
+    position:relative;
+    width:100%;
+    height:500px;
+}
+
+.pic{
+    position:absolute;
+    
+    top:auto;
+    2box-shadow:6px 6px 3px #333;
+    2-webkit-box-shadow:6px 6px 3px #333;
+    border:0; 
+	margin:0; 
+	padding:0; 
+	max-width:800px; 
+	width:expression(this.width>590?"590px":this.width); 
+	max-height:400px; 
+	height:expression(this.height>590?"590px":this.height); 
+
+ 	left:50%;
+	transform:translate(-50%,0); /*将div居中：以自己左上角为原点，向左移动50%，向上移动50%*/
 }
