@@ -80,7 +80,10 @@ html, body{
     color:#ccc;
 }
 
-
+.wrapper{
+    border-top:1px solid #282B2F;
+    height:100%;
+}
 .picWrapper{
     position:relative;
     width:100%;
@@ -89,6 +92,10 @@ html, body{
 
 .pic{
     position:absolute;
+    left:0;
+    top:0;
+    2box-shadow:6px 6px 3px #333;
+    2-webkit-box-shadow:6px 6px 3px #333;
     
     top:auto;
     2box-shadow:6px 6px 3px #333;
@@ -102,5 +109,83 @@ html, body{
 	height:expression(this.height>590?"590px":this.height); 
 
  	left:50%;
-	transform:translate(-50%,0); /*将div居中：以自己左上角为原点，向左移动50%，向上移动50%*/
+	transform:translate(-50%,0); 将div居中：以自己左上角为原点，向左移动50%，向上移动50%*/
+}
+
+.command{
+    background:#27282b;
+    background:-webkit-gradient(linear,left top,left bottom,from(#26292d),color-stop(50%,#27282b),to(#26292d));
+    height:150px;
+    border-top:1px solid #565555;
+    border-bottom:1px solid #565555;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    z-index:10;
+}
+
+.demoImg{
+    float:left;
+    margin:0px;
+    padding-left: 0px;
+}
+
+.demoImg li{
+    list-style:none;
+    display:inline-block;
+    margin-left:10px;
+    vertical-align:middle;
+    text-align:center;
+}
+.d_item{
+    width:80px;
+    height:150px;
+    overflow:hidden;
+    position:relative;
+}
+.d_item img{
+    width:80px;
+    height:auto;
+    border:3px solid rgb(45,45,45);
+}
+.lab{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align:center;
+    padding-bottom:10px;
+    font-size:12px;
+    color: #FFFFFF;
+}
+a.button{
+    text-decoration:none;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px; 
+    border-radius:5px;
+    background: #E0B324;
+
+    background: -moz-linear-gradient(0% 45% 90deg,#E0B324, #FAD121, #FFE678 100%);
+
+    background: -webkit-gradient(linear, 0% 0%, 0% 65%, from(#FFE678), to(#E0B324), color-stop(.2,#FAD121));
+
+    color:#312f30;
+    float:left;
+    font-family:arial,helvetica,sans-serif;
+    font-size:17px;
+    font-weight:bold;
+    padding:10px 20px;
+    text-shadow:1px 1px 0 #ebd663;
+}
+
+a.button:hover{
+    background: #D4A922;
+    background: -moz-linear-gradient(40% 51% 90deg,#D4A922, #EBC41F, #EDD670 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 65%, from(#EDD670), to(#D4A922), color-stop(.2,#EBC41F));
+}
+
+#open{
+    display:none;
+}
+.d_item{
+    cursor:pointer;
 }
