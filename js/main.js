@@ -87,8 +87,8 @@
                 _this.openFile(e.target.files[0]);
             });
 
-            this.addEvent(".lab", "click", function(e){
-                var text = this.childNodes[0].nodeValue.replace("效果","");
+            this.addEvent(".d_item", "click", function(e){
+                var text = this.childNodes[1].childNodes[0].nodeValue.replace("效果","");
                 var img = document.getElementById("pic");
                 var AP = _this.img.clone();
                 if(text == "原图") AP.replace(img);
