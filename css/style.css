@@ -66,9 +66,10 @@ html, body{
 
 #infoMsg{
     position:absolute;
-    top:170px;
-    left:450px;
-    z-index:9;
+    left: 50%;
+    transform:translate(-50%,0); 将div居中：以自己左上角为原点，向左移动50%，向上移动50%*/
+	top: 100px;   
+    z-index:999999;
     width:100px;
     height:100px;
     text-align:center;
@@ -82,20 +83,20 @@ html, body{
 
 .wrapper{
     border-top:1px solid #282B2F;
-    height:100%;
+    /*height:100%;*/
 }
 .picWrapper{
     position:relative;
     width:100%;
-    height:500px;
+    /*height:500px;*/
 }
 
 .pic{
     position:absolute;
-    left:0;
+    /*left:0;
     top:0;
     2box-shadow:6px 6px 3px #333;
-    2-webkit-box-shadow:6px 6px 3px #333;
+    2-webkit-box-shadow:6px 6px 3px #333;*/
     
     top:auto;
     2box-shadow:6px 6px 3px #333;
@@ -115,13 +116,15 @@ html, body{
 .command{
     background:#27282b;
     background:-webkit-gradient(linear,left top,left bottom,from(#26292d),color-stop(50%,#27282b),to(#26292d));
-    height:150px;
+    height:160px;
     border-top:1px solid #565555;
     border-bottom:1px solid #565555;
     position:fixed;
     bottom:0;
     width:100%;
     z-index:10;
+    overflow-x:auto;
+    overflow-y:hidden;
 }
 
 .demoImg{
@@ -175,6 +178,7 @@ a.button{
     font-weight:bold;
     padding:10px 20px;
     text-shadow:1px 1px 0 #ebd663;
+    cursor:pointer;
 }
 
 a.button:hover{

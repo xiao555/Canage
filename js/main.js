@@ -131,7 +131,7 @@
 
         initView: function(){
                 var func = function(){                    
-                    var w_width = parseInt(document.body.clientWidth) - 250;
+                    var w_width = parseInt(document.body.clientWidth)- 250;
                     var w_height = document.body.clientHeight;
                     var p_width = this.width;
                     var p_height = this.height;
@@ -141,15 +141,18 @@
                     top = top < 0 ? 0 : top;
                     left = left < 0 ? 0 : left;
                     this.style.left = left + "px";
-                    this.style.top = top + "px";                    
-                    msgEle.style.left = (parseInt(w_width)) + "px";
-                    msgEle.style.top = (parseInt(w_height) - 100) / 2 + "px";
+                    this.style.cssText = "tranform:"+"translate"+"(-50%,0);";
+                    this.style.top = 0 + "px";                    
+//                  msgEle.style.left = left + "px";
+                    msgEle.style.cssText = "left:" + "50%;"; 
+                    msgEle.style.cssText = "tranform:"+"translate"+"(-50%,0);";
+                    msgEle.style.top = 200 + "px";
                 };
                 func.call(document.getElementById("pic"));
 
                 var height = document.body.clientHeight;
                 //var left = document.querySelector(".left");
-                var leftHeight = height - 143;
+                var leftHeight = height;
                 //left.style.height = leftHeight + "px";
         },
 
@@ -180,8 +183,8 @@
         Main.init();
 
 
-//      var cw =  parseInt(document.body.clientWidth);
-//      document.getElementById("pic").style.width=cw+"px";
+//      var cw =  parseInt(document.body.clientHeight);
+//      document.getElementById("picWrapper").style.height=cw-200+"px";
 
     }, false);
 
