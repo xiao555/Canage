@@ -131,7 +131,7 @@
 
         initView: function(){
                 var func = function(){                    
-                    var w_width = parseInt(document.body.clientWidth)- 250;
+                    var w_width = parseInt(document.body.clientWidth);//获取可见区域 宽度 高度
                     var w_height = document.body.clientHeight;
                     var p_width = this.width;
                     var p_height = this.height;
@@ -140,13 +140,12 @@
                     var top = (parseInt(w_height) - parseInt(p_height)) / 2;
                     top = top < 0 ? 0 : top;
                     left = left < 0 ? 0 : left;
-                    this.style.left = left + "px";
-                    this.style.cssText = "tranform:"+"translate"+"(-50%,0);";
-                    this.style.top = 0 + "px";                    
-//                  msgEle.style.left = left + "px";
+                    this.style.cssText = "left:" + "50%;";
+                    this.style.cssText = "top:" + "50%;";
+                    this.style.cssText = "tranform:"+"translate"+"(-50%,-50%);";
+                    msgEle.style.cssText = "top:" + "50%;";
                     msgEle.style.cssText = "left:" + "50%;"; 
-                    msgEle.style.cssText = "tranform:"+"translate"+"(-50%,0);";
-                    msgEle.style.top = 200 + "px";
+                    msgEle.style.cssText = "tranform:"+"translate"+"(-50%,-50%);";
                 };
                 func.call(document.getElementById("pic"));
 
@@ -183,8 +182,8 @@
         Main.init();
 
 
-//      var cw =  parseInt(document.body.clientHeight);
-//      document.getElementById("picWrapper").style.height=cw-200+"px";
+        var cw =  parseInt(document.body.clientHeight);
+        document.getElementById("picWrapper").style.height= cw - 200 +"px";
 
     }, false);
 
