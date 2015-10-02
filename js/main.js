@@ -132,19 +132,19 @@
         initView: function(){
                 var func = function(){                    
                     var w_width = parseInt(document.body.clientWidth);//获取可见区域 宽度 高度
-                    var w_height = document.body.clientHeight-200;
+                    var w_height = parseInt(document.body.clientHeight)-200;
                     var p_width = this.width;
                     var p_height = this.height;
 
                     var left = (parseInt(w_width) - parseInt(p_width)) / 2;
                     var top = (parseInt(w_height) - parseInt(p_height)) / 2;
-                    top = top < 0 ? 0 : top;
-                    left = left < 0 ? 0 : left;
+//                  top = top < 0 ? 0 : top;
+//                  left = left < 0 ? 0 : left;
                     this.style.left = left;
-                    this.style.top = "top:" + top;
+                    this.style.top = top;
 //                  this.style.cssText = "tranform:"+"translate"+"(-50%,-50%);";
-                    msgEle.style.top = "top:" + top;
-                    msgEle.style.left = "left:" + left; 
+                    msgEle.style.top = top;
+                    msgEle.style.left = left; 
 //                  msgEle.style.cssText = "tranform:"+"translate"+"(-50%,-50%);";
                 };
                 func.call(document.getElementById("pic"));
