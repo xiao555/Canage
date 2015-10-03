@@ -34,10 +34,6 @@
 
             var clickFlag = 0, dx, dy, left, top;
             this.addEvent(".pic", "mousedown", function(e){
-            /*
-                dx = e.offsetX ? e.offsetX : e.layerX;
-                dy = e.offsetY ? e.offsetY : e.layerY;
-                */
 
                 dx = e.clientX;
                 dy = e.clientY;
@@ -52,20 +48,13 @@
             });
 
             document.getElementById("picWrapper").onmousemove = function(e){
-                /*
-                    var x = e.offsetX ? e.offsetX : e.layerX;
-                    var y = e.offsetY ? e.offsetY : e.layerY;
-                    */
+
                     var x = e.clientX;
                     var y = e.clientY;
 
                 if(clickFlag){
                     var pic = document.getElementById("pic");
 
-                    /*
-                    var x = e.offsetX ? e.offsetX : e.layerX;
-                    var y = e.offsetY ? e.offsetY : e.layerY;
-                    */
                      var x = e.clientX;
                     var y = e.clientY;
   
@@ -138,21 +127,17 @@
 
                     var left = (parseInt(w_width) - parseInt(p_width)) / 2;
                     var top = (parseInt(w_height) - parseInt(p_height)) / 2;
-//                  top = top < 0 ? 0 : top;
-//                  left = left < 0 ? 0 : left;
+
                     this.style.left = left;
                     this.style.top = top;
-//                  this.style.cssText = "tranform:"+"translate"+"(-50%,-50%);";
+
                     msgEle.style.top = top;
                     msgEle.style.left = left; 
-//                  msgEle.style.cssText = "tranform:"+"translate"+"(-50%,-50%);";
                 };
                 func.call(document.getElementById("pic"));
 
                 var height = document.body.clientHeight;
-                //var left = document.querySelector(".left");
                 var leftHeight = height;
-                //left.style.height = leftHeight + "px";
         },
 
         openFile: function(fileUrl){//打开图像文件
@@ -178,8 +163,7 @@
     window.addEventListener("DOMContentLoaded", function(){
         msgEle = document.getElementById("infoMsg");
 
-        //$AI.useWorker("js/combined/alloyimage.js");
-        Main.init();
+         Main.init();
 
 
         var cw =  parseInt(document.body.clientHeight);

@@ -1,16 +1,6 @@
 /*Designed by Xiao555  2015.9.26*/
 @charset "utf-8";
 
-/** {
-	display:inline-block;
-    margin:0;
-    padding:0;
-    border:0;
-    font-size:100%;
-    vertical-align:baseline;
-    outline:none;
-}*/
-
 html, body{
     font-family:"Corbel",'Hiragino Sans GB','Microsoft YaHei','΢���ź�',sans-serif;
     width:100%;
@@ -250,5 +240,40 @@ a.button:hover{
 .pic{
 	max-width:400px; 
 	max-height:400px; 
+}
+
+.header{
+	height: 100px;
+}
+
+.innerheader{
+	height: 99px;
+	vertical-align: middle;
+	text-align: center;
+	float: none;
+}
+
+.innerheader p{
+	margin-left: 0;
+	margin-top: 20px;
+}
+
+.logo{
+	margin-left: 0;
+	height: 49px;
+	float: none;
+	
+}
+.command{
+	height: 320px;
+}
+
+.d_item {
+	width: 160px;
+	height: 320px;
+}
+
+.d_item img{
+	width: 150px;
 }
 }
