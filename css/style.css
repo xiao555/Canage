@@ -174,6 +174,34 @@ a.button:hover{
     background: -webkit-gradient(linear, 0% 0%, 0% 65%, from(#EDD670), to(#D4A922), color-stop(.2,#EBC41F));
 }
 
+a.button2{
+	margin-top: 10px;
+    text-decoration:none;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px; 
+    border-radius:5px;
+    background: #E0B324;
+
+    background: -moz-linear-gradient(0% 45% 90deg,#E0B324, #FAD121, #FFE678 100%);
+
+    background: -webkit-gradient(linear, 0% 0%, 0% 65%, from(#FFE678), to(#E0B324), color-stop(.2,#FAD121));
+
+    color:#312f30;
+    float:left;
+    font-family:arial,helvetica,sans-serif;
+    font-size:17px;
+    font-weight:bold;
+    padding:10px 20px;
+    text-shadow:1px 1px 0 #ebd663;
+    cursor:pointer;
+}
+
+a.button2:hover{
+    background: #D4A922;
+    background: -moz-linear-gradient(40% 51% 90deg,#D4A922, #EBC41F, #EDD670 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 65%, from(#EDD670), to(#D4A922), color-stop(.2,#EBC41F));
+}
+
 #open{
     display:none;
 }

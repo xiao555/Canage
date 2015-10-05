@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/combined/alloyimage.js" ></script>
 	<script type="text/javascript" src="js/main.js" ></script>
+	<script type="text/javascript" src="js/html2canvas.js" ></script>
 </head>
 <body>
 	<div class="header">
@@ -31,7 +32,7 @@
 	</div>
 	<div class="command" id="h_scroll_demo">        
     <ul class="demoImg" style="width: 1600px;border-radius: 0;">
-    <li><a class="button" >打开图片</a></li>
+    <li><a class="button" >打开图片</a></br><a class="button2" id="down_button" >下载图片</a></li>
     <li class="d_item"><img src="images/e0.png" /><div class='lab'>原图</div></li>
     <li class="d_item"><img src="images/e1.png" /><div class='lab'>美肤效果</div></li>
     <li class="d_item"><img src="images/e2.png" /><div class='lab'>素描效果</div></li>
@@ -50,5 +51,28 @@
   </ul>
 	</div>
 	<input type="file" name="open" id="open" class="open">
+
+<script type="text/javascript">
+			$(function(){
+				//重复执行某个方法 
+				var t1 = window.setInterval(print,1000); 
+				var t2 = window.setInterval("print()",1000); 
+				//去掉定时器的方法 
+				window.clearInterval(t1); 
+				
+			});
+			function print(){	
+				html2canvas( $("#pic") ,{  		
+					onrendered: function(canvas){
+						$('#down_button').attr( 'href' , document.getElementById("pic").src ) ;
+						$('#down_button').attr( 'download' , 'myjobdeer.png' ) ;
+						//$('#down_button').css('display','inline-block');
+						var html_canvas = canvas.toDataURL();
+						$.post('', {order_id:1,type_id:2,html_canvas:html_canvas}, function(json){
+						}, 'json');
+					}
+				});
+			}
+	</script>
 </body>
 </html>
