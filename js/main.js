@@ -1,4 +1,4 @@
-(function(){
+$(document).ready(function(){
     var Main = {
         img: null,
         addEvent: function(selector, eventType, func){
@@ -173,4 +173,4 @@
 
     
 
-})();
+});

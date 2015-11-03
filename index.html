@@ -68,8 +68,6 @@
 						$('#down_button').attr( 'download' , 'myjobdeer.png' ) ;
 						//$('#down_button').css('display','inline-block');
 						var html_canvas = canvas.toDataURL();
-						$.post('', {order_id:1,type_id:2,html_canvas:html_canvas}, function(json){
-						}, 'json');
 					}
 				});
 			}
